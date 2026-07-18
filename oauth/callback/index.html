@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>QuickBooks Authorization | Slade Holdings</title><link rel="stylesheet" href="../../styles.css"></head><body><main><section class="panel"><p class="eyebrow">QUICKBOOKS AUTHORIZATION</p><h1 id="title">Authorization returned.</h1><p id="message">Keep this tab open while the secure local connection is completed.</p><noscript><p>JavaScript is required to display the authorization status.</p></noscript></section></main><script>
+const p=new URLSearchParams(location.search);const denied=p.get('error');const code=p.get('code');const realm=p.get('realmId');
+if(denied){document.getElementById('title').textContent='Connection canceled.';document.getElementById('message').textContent='No QuickBooks access was granted. You may close this tab.'}
+else if(!code||!realm){document.getElementById('title').textContent='Invalid authorization response.';document.getElementById('message').textContent='Restart the QuickBooks connection from the secure local setup.'}
+</script></body></html>
